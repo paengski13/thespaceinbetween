@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('', ['as' => 'clients.index', 'uses' => 'ClientController@index']);
+Route::post('upload', ['as' => 'clients.upload', 'uses' => 'ClientController@upload']);
